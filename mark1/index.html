@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MARK1 Prototype - LAYV.NET</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/essential.css">
+		<link rel="stylesheet" href="/style.css">
+		<link rel="icon" href="/favicon.png">
+	</head>
+	<body>
+		<nav>
+			<span>
+				<a href="/">LAYV.NET</a>
+				• <a href="/">Software</a>
+				• <a href="https://soundcloud.com/layv">Music</a>
+				• <a href="/about">About</a>
+			</span>
+		</nav>
+		<article>
+			<div>
+				<h1>MARK1 Prototype</h1>
+				<address>Created: 10.9.2015</address>
+				<img src="screenshot1.jpg" width="580" height="326">
+				<p>
+					Simple twin stick shooter. Experiment on multithreaded game optimization (The engine can process over 10'000 explosions at the same time on the screen @60FPS on a first-gen i7!)
+				</p>
+				<h2>Download</h2>
+				<p><a href="game.zip">Portable, Windows 32-bit</a></p>
+				<h2>Requirements:</h2>
+				<ul>
+					<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=40784">Visual C++ 2013 Redistributable</a>
+					<li>Windows Vista, 7, 8, 8.1, 10
+					<li>Direct 10.1 compatible graphics card
+				</ul>
+				<h2>Installation</h2>
+				<ol>
+					<li>Extract the archive
+					<li>Run game.exe
+					<li>If it doesn't run, install <a href="https://www.microsoft.com/en-us/download/details.aspx?id=40784">Visual C++ 2013 Redistributable</a>
+				</ol>
+
+				<h2>Controls</h2>
+				<p>
+					WSAD/left stick – Move<br>
+					Mouse + Left click/right stick – aim and shoot
+				</p>
+				<p>What I've learned:</p>
+				<ol>
+					<li> Parallel rendering
+					<li> Collision detection
+					<li> Using std::bind 1000 times/sec is a bad idea
+				</ol>
+				<h2>License</h2>
+				<p>
+					This is is a prototype. It's distributed for free, as it is. If it doesn't work, <a href="mailto:lukasz.andrzej.wrona@gmail.com">send me an e-mail</a>.
+				</p>
+			</div>
+		</article>
+		<aside>
+			<a href="game.zip">
+				Portable download for
+				<h2>Windows 32-bit</h2>
+			</a>
+			<a href="https://www.microsoft.com/en-us/download/details.aspx?id=40784">
+				Requires Visual C++ 2013
+				<h2>Redistributable</h2>
+			</a>
+		</aside>
+		<footer>
+			<span>
+				Copyright (c) 2015 Łukasz A.J. (LAYV) Wrona
+			</span>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+
+	<!-- sprites -->
+	
+	<sprite id="font-basic" src="font-basic.png" width="5" height="5">
+		<frame/>
+	</sprite>
+	<sprite id="particle-explosion" src="particle-explosion.png" width="64" height="64">
+		<frame/>
+	</sprite>
+	<sprite id="particle-laserbeam-red" src="particle-laserbeam-red.png" width="8" height="8">
+		<frame/>
+	</sprite>
+	<sprite id="particle-lasersight-red" src="particle-lasersight-red.png" width="21" height="21">
+		<frame/>
+	</sprite>
+	<sprite id="particle-light" src="particle-light-white.png" width='500' height='167'>
+		<frame/>
+	</sprite>
+	<sprite id="particle-light-red" src="particle-light-red.png" width="500" height="167">
+		<frame/>
+	</sprite>
+	<sprite id="particle-light-skyblue" src="particle-light-skyblue.png" width="500" height="167">
+		<frame/>
+	</sprite>
+	<sprite id="particle-light-orange" src="particle-light-orange.png" width="500" height="167">
+		<frame/>
+	</sprite>
+	<sprite id="particle-light-green" src="particle-light-green.png" width="500" height="167">
+		<frame/>
+	</sprite>
+	<sprite id="particle-light-purple" src="particle-light-purple.png" width="500" height="167">
+		<frame/>
+	</sprite>
+	<sprite id="particle-pink" src="particle-pink.png" width="8" height="8">
+		<frame/>
+	</sprite>
+	<sprite id="particle-skyblue" src="particle-skyblue.png" width="8" height="8">
+		<frame x="0" y="0"/>
+	</sprite>
+	<sprite id="particle-smoke" src="particle-smoke.png" width="252" height="252">
+		<frame/>
+	</sprite>
+	<sprite id="particle-throttle" src="particle-throttle.png" width="8" height="8">
+		<frame x="0" y="0"/>
+		<frame x="0" y="8"/>
+		<frame x="0" y="16"/>
+		<frame x="0" y="25"/>
+	</sprite>
+	<sprite id="particle-throttle-green" src="particle-throttle-green.png" width="8" height="8">
+		<frame x="0" y="0"/>
+		<frame x="0" y="8"/>
+		<frame x="0" y="16"/>
+		<frame x="0" y="25"/>
+	</sprite>
+	<sprite id="particle-throttle-purple" src="particle-throttle-purple.png" width="8" height="8">
+		<frame x="0" y="0"/>
+		<frame x="0" y="8"/>
+		<frame x="0" y="16"/>
+		<frame x="0" y="25"/>
+	</sprite>
+	<sprite id="particle-throttle-orange" src="particle-throttle-orange.png" width="8" height="8">
+		<frame x="0" y="0"/>
+		<frame x="0" y="8"/>
+		<frame x="0" y="16"/>
+		<frame x="0" y="25"/>
+	</sprite>
+	<sprite id="particle-throttle-uber" src="particle-throttle-uber.png" width='32' height='16'>
+		<frame x='0' y='0'/>
+		<frame x='0' y='16'/>
+		<frame x='0' y='32'/>
+		<frame x='0' y='48'/>
+	</sprite>
+	<sprite id='powerup-upgrade' src='powerup-upgrade.png' width='11' height='11'>
+		<frame x="0" y="0"/>
+	</sprite>
+	<sprite id="projectile-bullet" src="projectile-bullet.png" width="16" height="9">
+		<frame x="0" y="0"/>
+	</sprite>
+	<sprite id="projectile-shell" src="projectile-shell.png" width="16" height="16">
+		<frame x="0" y="0"/>
+	</sprite>
+	<sprite id="ship-battlecruiser" src="ship-battlecruiser.png" width="128" height="128">
+		<frame x="0" y="0"/>
+		<frame x="0" y="128"/>
+		<frame x="0" y="256"/>
+		<frame x="0" y="384"/>
+		<frame x="0" y="512"/>
+		<frame x="0" y="640"/>
+		<frame x="0" y="768"/>
+		<frame x="0" y="896"/>
+		<frame x="0" y="1024"/>
+	</sprite>
+	<sprite id="ship-executor" src="ship-executor.png" width="128" height="128">
+		<frame x="0" y="0"/>
+	</sprite>
+	<sprite id="ship-executor-spinner" src='ship-executor.png' width='128' height='128'>
+		<frame x='0' y='128'/>
+	</sprite>
+	<sprite id='ship-main' src='ship-main.png' width='116' height='116'>
+		<frame/>
+	</sprite>
+	<sprite id='ship-main-4' src='ship-main-4.png' width='116' height='116'>
+		<frame/>
+		<frame x='116' y='232'/>
+		<frame y='116'/>
+		<frame y='232'/>
+		<frame y='348'/>
+		<frame x='116' y='0'/>
+		<frame x='116' y='116'/>
+		<frame x='116' y='348'/>
+		<frame x='232' y='0'/>
+		<frame x='232' y='116'/>
+		<frame x='232' y='232'/>
+		<frame x='232' y='348'/>
+		<frame x='348' y='0'/>
+	</sprite>
+	<sprite id='ship-main-3' src='ship-main-3.png' width='116' height='116'>
+		<frame/>
+		<frame x='116' y='232'/>
+		<frame y='116'/>
+		<frame y='232'/>
+		<frame y='348'/>
+		<frame x='116' y='0'/>
+		<frame x='116' y='116'/>
+		<frame x='116' y='348'/>
+		<frame x='232' y='0'/>
+		<frame x='232' y='116'/>
+		<frame x='232' y='232'/>
+		<frame x='232' y='348'/>
+		<frame x='348' y='0'/>
+	</sprite>
+	<sprite id='ship-main-2' src='ship-main-2.png' width='116' height='116'>
+		<frame/>
+		<frame x='116' y='232'/>
+		<frame y='116'/>
+		<frame y='232'/>
+		<frame y='348'/>
+		<frame x='116' y='0'/>
+		<frame x='116' y='116'/>
+		<frame x='116' y='348'/>
+		<frame x='232' y='0'/>
+		<frame x='232' y='116'/>
+		<frame x='232' y='232'/>
+		<frame x='232' y='348'/>
+		<frame x='348' y='0'/>
+	</sprite>
+	<sprite id='ship-main-skyblue' src='ship-main-skyblue-animated2.png' width='116' height='116'>
+		<frame/>
+		<frame x='116' y='232'/>
+		<frame y='116'/>
+		<frame y='232'/>
+		<frame y='348'/>
+		<frame x='116' y='0'/>
+		<frame x='116' y='116'/>
+		<frame x='116' y='348'/>
+		<frame x='232' y='0'/>
+		<frame x='232' y='116'/>
+		<frame x='232' y='232'/>
+		<frame x='232' y='348'/>
+		<frame x='348' y='0'/>
+	</sprite>
+	<sprite id='ship-minion1' src='ship-minion1.png' width='64' height='64'>
+		<frame x='0' y='0'/>
+		<frame x='0' y='64'/>
+	</sprite>
+	<sprite id='ship-minion2' src='ship-minion2.png' width='32' height='32'>
+		<frame x='0' y='0'/>
+		<frame x='0' y='32'/>
+		<frame x='0' y='64'/>
+		<frame x='0' y='96'/>
+	</sprite>
+	<sprite id='ship-peasant1' src='ship-peasant1.png' width='64' height='64'>
+		<frame x='0' y='0'/>
+	</sprite>
+	<sprite id='ship-peasant2' src='ship-peasant2.png' width='66' height='66'>
+		<frame x='0' y='0'/>
+	</sprite>
+	<sprite id='ship-turret' src='ship-turret.png' width='32' height='32'>
+		<frame x='0' y='0'/>
+	</sprite>
+	<sprite id='sprite-background' src='sprite-background.png' width='2560' height='1600'>
+		<frame x='0' y='0'/>
+	</sprite>
+	<sprite id='sprite-colormap' src='sprite-colormap.png' width='10' height='1'>
+		<frame id='red' x="0" y="0"/>
+		<frame id='grey' x='1' y='0'/>
+		<frame id='white' x='2' y='0'/>
+		<frame id='black' x='3' y='0'/>
+	</sprite>
+	<sprite id='sprite-logo' src='sprite-logo.png' width='460' height='50'>
+		<frame x='0' y='0'/>
+		<frame x='0' y='50'/>
+		<frame x='0' y='100'/>
+		<frame x='0' y='150'/>
+		<frame x='0' y='200'/>
+		<frame x='0' y='250'/>
+		<frame x='0' y='300'/>
+		<frame x='0' y='350'/>
+		<frame x='0' y='400'/>
+		<frame x='0' y='450'/>
+	</sprite>
+	<sprite id='sprite-data-viewer' src='sprite-data-viewer-logo.png' width='280' height='74'>
+		<frame/>
+	</sprite>
+	<sprite id='sprite-wrona' src='sprite-wrona-ent-logo-transparent.png' width='310' height='100'>
+		<frame/>
+	</sprite>
+
+	<!-- projectiles -->
+	
+	<projectile id='missile' size='30' speed='1000' damage='1' acceleration='1000'>
+		<sticker sprite='projectile-shell'		size='30' z='3' rotation='true'/>
+		<sticker sprite='particle-light-orange'	size='250' z='4' x='-15'/>
+		<tracer color='fa5' size='16' z='1' length='8' max-speed='1000'/>
+		<tracer color='fda' size='4' z='1' length='16' max-speed='1000'/>
+		<particle x='-50' y='0' size='20' growth='200' angle='180' sprite='particle-smoke' launch-speed='0.01' spread='30' min-speed='100' max-speed='300' lifespan='0.75' rotation='40' module-lifespan='1'/>
+	</projectile>
+	<projectile id='bullet' size='15' speed='600' damage='1'>
+		<sticker sprite='projectile-bullet' size='15' z='2' rotation='true'/>
+		<tracer color='ccc' size='8' z='1' length='5' max-speed='500'/>
+	</projectile>
+	<projectile id='destroyer-bullet' size='15' speed='600' damage='1'>
+		<tracer color='ccc' size='8' z='6' length='5' max-speed='500'/>
+		<sticker sprite='projectile-bullet' size='15' z='6' rotation='true'/>
+	</projectile>
+	
+	<!-- ships -->
+	
+	<ship id='main' size='80' health='1' speed='500' turn-speed='500'
+		name='MARK 1.4.1'
+		desc="Fourth iteratiton of the MARK1 flagship. 1.4.x features customisable weapon modules, brand new spacial-localisation systems and obnoxious, shiny thrusters. Not as stealthy as 1.2's, but capable of causing mayhem nonetheless.">
+		<tracer size='15'	z='5'	x='-30'	y='0'	color='0ff'	max-speed='500'	length='15'/>
+		<tracer size='2'	z='5'	x='-17'	y='48'	color='0ff'	max-speed='500'	length='10'/>
+		<tracer size='2'	z='5'	x='-17'	y='-48'	color='0ff'	max-speed='500'	length='10'/>
+		<sticker sprite='particle-throttle'			size="40"	z='5'	x="-40"	y="0" rotation='true' smooth='true'/>
+		<sticker sprite='ship-main-skyblue' 		size='100'	z='5'	rotation='true'/>
+		<sticker sprite='particle-light-skyblue'	size='250'	z='8'	x='-25'	y='0'/>
+		<sticker sprite='particle-light'			size='70'	z='8'	x='10'	y='45'/>
+		<sticker sprite='particle-light-red'		size='70'	z='8'	x='10'	y='-45'/>
+		<sticker sprite='particle-light'			size='150'	z='8'	x='10'	y='45'	pattern='010000'/>
+		<sticker sprite='particle-light-red'		size='150'	z='8'	x='10'	y='-45'	pattern='100000'/>
+		
+		<launcher projectile='bullet' x='-20' y='45' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<launcher projectile='bullet' x='-20' y='-45' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<launcher projectile='missile' y='15' speed='0.5'/>
+		<launcher projectile='missile' y='-15' speed='0.5'/>
+	</ship>
+	<ship id='main-2' size='80' health='1' speed='500' turn-speed='500'
+		name='MARK 1.4.2'
+		desc="Fourth iteratiton of the MARK1 flagship. 1.4.x features customisable weapon modules, brand new spacial-localisation systems and obnoxious, shiny thrusters. Not as stealthy as 1.2's, but capable of causing mayhem nonetheless.">
+		<tracer size='15'	z='5'	x='-30'	y='0'	color='fb3'	max-speed='500'	length='15'/>
+		<tracer size='2'	z='5'	x='-17'	y='48'	color='fb3'	max-speed='500'	length='10'/>
+		<tracer size='2'	z='5'	x='-17'	y='-48'	color='fb3'	max-speed='500'	length='10'/>
+		<sticker sprite='particle-throttle-orange'	size="40"	z='5'	x="-40"	y="0" rotation='true' smooth='true'/>
+		<sticker sprite='ship-main-2' 		size='100'	z='5'	rotation='true'/>
+		<sticker sprite='particle-light-orange'	size='250'	z='6'	x='-25'	y='0'/>
+		<sticker sprite='particle-light'			size='70'	z='8'	x='10'	y='45'/>
+		<sticker sprite='particle-light-red'		size='70'	z='8'	x='10'	y='-45'/>
+		<sticker sprite='particle-light'			size='150'	z='8'	x='10'	y='45'	pattern='010000'/>
+		<sticker sprite='particle-light-red'		size='150'	z='8'	x='10'	y='-45'	pattern='100000'/>
+		
+		<launcher projectile='bullet' x='-20' y='45' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<launcher projectile='bullet' x='-20' y='-45' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<launcher projectile='missile' y='15' speed='0.5'/>
+		<launcher projectile='missile' y='-15' speed='0.5'/>
+	</ship>
+	<ship id='main-3' size='80' health='1' speed='500' turn-speed='500'
+		name='MARK 1.4.3'
+		desc="Fourth iteratiton of the MARK1 flagship. 1.4.x features customisable weapon modules, brand new spacial-localisation systems and obnoxious, shiny thrusters. Not as stealthy as 1.2's, but capable of causing mayhem nonetheless.">
+		<tracer size='15'	z='5'	x='-30'	y='0'	color='cf3'	max-speed='500'	length='15'/>
+		<tracer size='2'	z='5'	x='-17'	y='48'	color='cf3'	max-speed='500'	length='10'/>
+		<tracer size='2'	z='5'	x='-17'	y='-48'	color='cf3'	max-speed='500'	length='10'/>
+		<sticker sprite='particle-throttle-green'	size="40"	z='5'	x="-40"	y="0" rotation='true' smooth='true'/>
+		<sticker sprite='ship-main-3' 				size='100'	z='5'	rotation='true'/>
+		<sticker sprite='particle-light-green'		size='250'	z='8'	x='-25'	y='0'/>
+		<sticker sprite='particle-light'			size='70'	z='8'	x='10'	y='45'/>
+		<sticker sprite='particle-light-red'		size='70'	z='8'	x='10'	y='-45'/>
+		<sticker sprite='particle-light'			size='150'	z='8'	x='10'	y='45'	pattern='010000'/>
+		<sticker sprite='particle-light-red'		size='150'	z='8'	x='10'	y='-45'	pattern='100000'/>
+		
+		<launcher projectile='bullet' x='-20' y='45' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<launcher projectile='bullet' x='-20' y='-45' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<launcher projectile='missile' y='15' speed='0.5'/>
+		<launcher projectile='missile' y='-15' speed='0.5'/>
+	</ship>
+	<ship id='main-4' size='80' health='1' speed='500' turn-speed='500'
+		name='MARK 1.4.4'
+		desc="Fourth iteratiton of the MARK1 flagship. 1.4.x features customisable weapon modules, brand new spacial-localisation systems and obnoxious, shiny thrusters. Not as stealthy as 1.2's, but capable of causing mayhem nonetheless.">
+		<tracer size='15'	z='5'	x='-30'	y='0'	color='f0f'	max-speed='500'	length='15'/>
+		<tracer size='2'	z='5'	x='-17'	y='48'	color='f0f'	max-speed='500'	length='10'/>
+		<tracer size='2'	z='5'	x='-17'	y='-48'	color='f0f'	max-speed='500'	length='10'/>
+		<sticker sprite='particle-throttle-purple'	size="40"	z='5'	x="-40"	y="0" rotation='true' smooth='true'/>
+		<sticker sprite='ship-main-4' 				size='100'	z='5'	rotation='true'/>
+		<sticker sprite='particle-light-purple'		size='250'	z='8'	x='-25'	y='0'/>
+		<sticker sprite='particle-light'			size='70'	z='8'	x='10'	y='45'/>
+		<sticker sprite='particle-light-red'		size='70'	z='8'	x='10'	y='-45'/>
+		<sticker sprite='particle-light'			size='150'	z='8'	x='10'	y='45'	pattern='010000'/>
+		<sticker sprite='particle-light-red'		size='150'	z='8'	x='10'	y='-45'	pattern='100000'/>
+		
+		<launcher projectile='bullet' x='-20' y='45' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<launcher projectile='bullet' x='-20' y='-45' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<launcher projectile='missile' y='15' speed='0.5'/>
+		<launcher projectile='missile' y='-15' speed='0.5'/>
+	</ship>
+	<ship name="Executor" id='executor' size='170' health='20' speed='25' turn-speed='5'
+		desc="Prototype of all laser-equipped ships. Mounted with just single lens capable of dispatching any target at any range. ">
+		<sticker sprite='ship-executor'			y='4' z='5' size='250' rotation='true'/>
+		<sticker sprite='ship-executor-spinner' z='5' size='250' rotation='90'/>
+		<sticker sprite='particle-light'		z='6' size='300' rotation='-10'/>
+		<sticker sprite='particle-light-red'	z='6' size='750' pattern='111111000000'/>
+		<sticker sprite='particle-light-red'	z='6' size='900'/>
+		<laser charge='particle-lasersight-red' beam='particle-laserbeam-red' size='30' heat-per-second='3' cooldown='5'/>
+	</ship>
+	<ship name="Destroyer" id='destroyer' size='250' health='100' speed='50' turn-speed='30'>
+		<missile-turret sprite='ship-turret' offset-x='8' size='50' projectile='destroyer-bullet' turn-speed='150' x='-31' y='105' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<missile-turret sprite='ship-turret' offset-x='8' size='50' projectile='destroyer-bullet' turn-speed='150' x='-31' y='-105' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<missile-turret sprite='ship-turret' offset-x='8' size='50' projectile='destroyer-bullet' turn-speed='150' x='-86' y='105' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<missile-turret sprite='ship-turret' offset-x='8' size='50' projectile='destroyer-bullet' turn-speed='150' x='-86' y='-105' speed='0.08' heat-per-shot='0.1' cooldown='2' spread='20' spread-curve='2' spinup='0.3'/>
+		<tracer size='30'	z='5'	y='0'		x='-130'	color='f00' max-speed='50' length='50'/>
+		<tracer size='15'	z='5'	y='35'		x='-120'	color='f00' max-speed='50' length='50'/>
+		<tracer size='15'	z='5'	y='-35'		x='-120'	color='f00' max-speed='50' length='50'/>
+		<tracer size='5'	z='5'	y='-41'		x='157'		color='f00' max-speed='100' length='20'/>
+		<tracer size='5'	z='5'	y='41'		x='157'		color='f00' max-speed='100' length='20'/>
+		<tracer size='5'	z='5'	y='140'		x='-115'	color='f00' max-speed='100' length='20'/>
+		<tracer size='5'	z='5'	y='-140'	x='-115'	color='f00' max-speed='100' length='20'/>
+		<sticker sprite='particle-throttle-uber'	size="50"	z='5'	y="0"	x="-145" rotation='true'/>
+		<sticker sprite='particle-throttle-uber'	size="50"	z='5'	y="-35"	x="-130" rotation='true'/>
+		<sticker sprite='particle-throttle-uber'	size="50"	z='5'	y="35"	x="-130" rotation='true'/>
+		<sticker sprite='ship-battlecruiser' 		size='300'	z='5'	x='30'	rotation='true'/>
+		<sticker sprite='particle-light-red' 		size='200' 	z='8'	y='-35'	x='-120'/>
+		<sticker sprite='particle-light-red' 		size='200' 	z='8'	y='35'	x='-120'/>
+		<sticker sprite='particle-light-red' 		size='500'	z='8'	y='0'	x='-120'/>
+		<sticker sprite='particle-light-red'		size='200'	z='8'	y='-41' x='157'/>
+		<sticker sprite='particle-light-red'		size='200'	z='8'	y='41' x='157'/>
+	</ship>
+	<ship id='minion1' size='30' health='1' speed='200' turn-speed='500'>
+		<sticker sprite='particle-throttle' z='5'	size="10" 	x="-20"	y="5"	rotation='true'/>
+		<sticker sprite='particle-throttle'	z='5'	size="10"	x="-20"	y="-5"	rotation='true'/>
+		<sticker sprite='ship-minion1'		z='5'	size='30'	rotation="true"/>
+	</ship>
+	<ship id='minion' size='30' health='1' speed='200' turn-speed='500'>
+		<sticker sprite='particle-throttle-uber'	z='5'		size="6" 	rotation='true'	x="-18"	y="10"/>
+		<sticker sprite='particle-throttle-uber'	z='5'		size="6" 	rotation='true'	x="-18"	y="-10"/>
+		<sticker sprite='ship-minion2'				z='5'		size='30'	rotation='true'/>
+	</ship>
+	<ship id='peasant' size='60' health='4' speed='100' turn-speed='130'>
+		<sticker sprite='particle-throttle-uber'	size='12' z='5'	rotation='true'	x='-33'/>
+		<sticker sprite='particle-throttle-uber'	size='10' z='5'	rotation='true'	x='-28' y='-18'/>
+		<sticker sprite='particle-throttle-uber'	size='10' z='5'	rotation='true'	x='-28' y='18'/>
+		<sticker sprite='ship-peasant2'				size='75' z='5'	rotation='true' x="10"/>
+		<launcher projectile='bullet' x="-10" speed='3' pellet-count='3' spread='60' regular='true'/>
+	</ship>
+</data>

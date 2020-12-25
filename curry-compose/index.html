@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Promise-aware curry() and compose() - LAYV.NET</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device, initial-scale=1">
+		<link rel="stylesheet" href="/essential.css">
+		<link rel="stylesheet" href="/style.css">
+		<link rel="icon" href="/favicon.png">
+	</head>
+	<body>
+		<nav>
+			<span>
+				<a href="/">LAYV.NET</a>
+				• <a href="/">Software</a>
+				• <a href="https://soundcloud.com/layv">Music</a>
+				• <a href="/about">About</a>
+			</span>
+		</nav>
+		<article>
+<div>
+<h1>Promise-Aware curry() and compose()</h1>
+<h2>Disclaimer:</h2>
+<p>I assume you're vaguely familiar with <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise">ES6 Promises</a> and <a href="https://github.com/MostlyAdequate/mostly-adequate-guide">functional JavaScript.</a></p>
+<h2>Let us begin!</h2>
+<p>
+Functional JavaScript is useless. It's a nuisance. A toy. A fruit for thought. But still - useless. Mostly because of Monads.
+</p>
+<ul>
+<li>Error handling is for the most part incompatible with existing code. You need to wrap throws into Monads.
+<li>Monads are clunky. You need to be aware whether the function returns monad or regular value, you have to manually flatten multiple layers of different monads, chain after every function call, etc.
+<li>Even when libs are preloaded and cached and startup isn't important, it's throughput is still much lower than that of non-functional code
+</ul>
+<p>But with ES6 came <code>Promises</code>. Not only do they solve most monadic problems. They came to save us all</p>
+<ul>
+<li>They automatically flatten – when you promise a promise to a value, you get promise to a value
+<pre>Promise.resolve(Promise.resolve(5)).then(console.log.bind(console));
+// Prints 5, not promise of 5</pre>
+<li>They automatically catch and convert imperative errors to functional errors – no wrappers required
+<li>They're the standard– they're faster than any JS monad implementation and you don't have to include anything
+<li>You can join parallel promises into one with <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all">Promise.all</a></code>
+<li>They handle both synchronous and asynchronous code
+</ul><p>
+But when using <code>compose()</code> or <code>curry()</code> we still have to manually chain and link functions with <code>.then()</code> or <code>Promise.all()</code>
+</p>
+<p>Which is pretty sad, especially when you compare synchronous function returning value to the same function returning value via promise</p>
+<table>
+<tr>
+<th width="50%">Return Value</th>
+<th width="50%">Promise Value</th>
+</tr>
+<tr>
+<td><pre>function id(x) {
+	return x;
+}</pre></td>
+<td><pre>function id(x) {
+	return Promise.resolve(x);
+}
+</pre></td>
+</tr>
+</table>
+<p>Why are we discriminating promised values in the functional arrow-based world? Shouldn't they have equal rights? It shouldn't matter if the arrow points to now or into the future!</p>
+<h2>Imagine...</h2><p>
+What if we had <code>compose()</code> that, when fed with a function returning a promise, would automatically convert output to promise and start mapping remaining functions via <code>.then()</code> method?
+</p><p>
+Example
+</p>
+<pre>let elementsFromFile = <b>compose</b>(map(toElement),
+	param("data"), JSON.parse, asyncLoadFile);
+
+// imperative data extraction 
+elementsFromFile("elements.json")
+	.then(function (elements) {
+		// update the view
+	}).catch(function () {
+		// Display friendly message, retry
+	});</pre>
+<p>
+	See? Looks like your typical synchronous functional code. But it is async! Only extracting the data in a non-functional way hints that something asynchronous is going on.
+</p>
+<p>
+	Not all functions take in only a single argument, however. That's where <code>curry()</code> comes into the picture. If it finds promises in the argument list, it'll wait for them all to resolve, extract values, call underlying function and return output in a single promise.
+</p>
+<pre>let appendInto = <b>curry</b>(function (parent, element) {
+	return parent.appendChild(element);
+});
+
+let showElements = compose(
+	each(compose(
+		appendInto(promiseBody()), 
+		toElement
+	)),
+	param("data"),
+	JSON.parse,
+	ajax);
+
+showElements("elements.json")
+	.catch(alert("server error"));</pre>
+<h2>But what can you do with it?</h2>
+<p>
+<b>Simple async parallel waiting!</b>
+</p><p>
+Think of parallelized version of shell scripts – you control the flow of the data and you don't care how, when or in what form it's arrived.
+</p><p>
+Current trend is to go for the <code>.then()</code> train
+</p>
+<pre>functionReturningPromise()
+	.then(fn1)
+	.then(fn2)
+	.then(fn3);
+</pre>
+<p>Which is meant to be replaced with the upcoming <code>await</code>:
+<pre>
+let val = await functionReturningPromise();
+val = await fn1(val);
+val = await fn2(val);
+val = await fn3(val);
+</pre>
+<p>
+It may look nice at first glance, but it's always a <i>single</i> queue. Wait for one thing, process, wait for the next, process, rinse and repeat. But when you wait for independent events in this way, you're wasting your time.
+</p><p>
+Here you can easily wait for <i>two, three or more</i> events at once! Even better – you don't have to treat promised values in any special way – <code>curry()</code> takes care of that. And you don't have to remember whether to chain functions with <code>.then</code> or not because of <code>compose()</code>.
+</p>
+<p>
+I've written these, to parallelize waiting in Webkit extension API, where literally <i>every single call is asynchronous</i>. Localization files, local data, sync data, document.body, chrome.sessions, chrome.history, chrome.tabs. Non-API code executes pretty quickly but 90% of the time was wasted on waiting for the async data to resolve. It's a perfect opportunity to parallelize independent waits.
+</p>
+<p>
+	It basically lets me to do this asynchronously and parallely:
+</p>
+<img src="flustercluck.jpg" width=580>
+<p>
+	And not go immediately insane
+</p>
+<h2>Download/Install</h2>
+<p>You can grab these functions from their <a href="https://github.com/LAJW/curry-compose">GitHub repository</a></p>
+<a href="https://www.reddit.com/r/javascript/comments/3kkcsn/es6_promiseaware_curry_and_compose/"><h2>Discuss this on Reddit</h2></a>
+</div>
+		</article>
+		<footer>
+			<span>
+				Copyright © 2015 Łukasz A.J. (LAYV) Wrona
+			</span>
+		</footer>

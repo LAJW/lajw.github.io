@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Optimize Your Game - Part One - LAYV.NET</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device, initial-scale=1">
+	<link rel="stylesheet" href="/essential.css">
+	<link rel="stylesheet" href="/style.css">
+	<link rel="icon" href="/favicon.png">
+	<script src="/boiler.js" type="text/javascript"></script>
+</head>
+<body>
+<main>
+<article>
+	<h1>Off-thread rendering</h1>
+	<address>Created: 10.9.2015</address>
+	<p>
+		Here's what we have to work with:
+	</p>
+	<ol>
+		<li>
+			You can only call graphics APIs from a single, dedicated thread.
+			It applies everywhere: DirectX, OpenGL, HTML5's canvas.
+		</li>
+		<li>
+			Calling "End, go ahead and render" is a non-busy blocking call
+			that waits for the GPU, so the core can do whatever it wants in
+			the meantime.
+		</li>
+		<li>
+			Starting a thread takes more time than rendering a frame -
+			30-200ms as opposed to a single frame - 15ms @ 60FPS.
+		</li>
+	</ol>
+	<p>
+		With that in mind there is one simple trick we can use to speed up
+		your game right now - render on a dedicated thread.
+	</p>
+	<h2>Ingredients</h2>
+	<ol>	
+		<li>
+			A persistent thread (launch on startup, kill on exit). On-demand
+			<code>std::async</code> doesn't cut it because of the startup
+			time, which is a shame - promises would be very useful here.
+		</li>
+		<li>
+			Render instruction data structure - for 2D it could be a struct
+			with a bitmap reference, position, rotation and so on. But
+			generally, we want to replicate and serialize the graphics API
+			calls.
+		</li>
+		<li>2 vectors of rendering instructions.</li>
+		<li>A single mutex.</li>
+	</ol>
+	<h2>The flow</h2>
+	<p>
+		We process the game logic off-thread. We don't directly call the
+		rendering API, instead fill the vector up with rendering
+		instructions. When the game logic finishes, guarding with a mutex, we
+		swap vectors. The main thread only renders and waits for swaps.
+	</p>
+	<img src="off-thread-rendering.jpg" width="580" height="376">
+	<h2>Advantages</h2>
+	<ol>
+		<li>
+			Halving frame times even in tangled, monolithic single-threaded
+			games.
+		</li>
+		<li>Separation of game and graphics API code.</li>
+		<li>
+			Testability - because we don't have to mock, we can inspect what
+			gets rendered.
+		</li>
+		<li>
+			Establishing a base for rendering from more than just one thread.
+			Now we can "render" from multiple off-threads and collect the results.
+		</li>
+	</ol>
+</article>
+</main>
+</body>
+</html>

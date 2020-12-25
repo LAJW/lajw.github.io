@@ -1,0 +1,142 @@
+body {
+	text-align: center;
+	font-family: "Georgia"; 
+	margin: 0px;
+	padding: 0px;
+	font-size: 0pt;
+	min-width: 320px;
+}
+
+address {
+	font-style: normal;
+}
+
+article, aside a, nav, .spotlight a, footer {
+	font-size: 12pt;
+}
+
+div, span {
+	margin: 0px;
+	padding: 0px;
+}
+
+h1, h2, h3, h4 ,h5, h6, p, address, code, article, aside, q, code {
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 10px;
+	font-weight: normal;
+}
+
+ul, ol {
+	padding-left: 20px;
+}
+
+ul li {
+	list-style: circle;
+}
+
+h1 { font-size: 32pt }
+h2 { font-size: 18pt }
+
+article {
+	vertical-align: top;
+	display: inline-block;
+	max-width: 600px;
+	min-width: 300px;
+	width: 100%;
+	text-align: left;
+}
+
+aside {
+	text-align: left;
+	vertical-align: top;
+	display: inline-block;
+	width: 300px;
+}
+
+aside a:link, aside a:visited, aside a, .spotlight a, .spotlight a:visited,
+.spotlight a:link{
+	background: black;
+	color: white;
+	text-align: left;
+	text-decoration: none;
+	overflow: hidden;
+}
+
+aside a {
+	display: block;
+	padding: 10px;
+	margin-bottom: 10px;
+	line-height: 15px;
+}
+
+aside h2 {
+	line-height: 30px;
+	margin-bottom: 0px;
+}
+
+.spotlight a {
+	display: inline-block;
+	vertical-align: top;
+	width: 300px;
+	height: 300px;
+	margin: 5px;
+}
+
+.spotlight {
+	padding: 5px;
+}
+
+.spotlight div, article div {
+	padding: 10px;
+}
+
+code, pre {
+	font-family: "Liberation Mono", "Consolas", monospace;
+	font-size: 11pt;
+}
+
+pre {
+	display: block;
+	background: #eee;
+	padding: 10px;
+}
+
+q {
+	display: block;
+	border-left: #902dff 5px solid;
+	padding: 10px;
+	font-style: italic;
+}
+
+q:after, q:before {
+	display: none;
+}
+
+a.fat, a.fat:link, a.fat:visited {
+	display: block;
+	background: black;
+	height: 200px;
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+nav span {
+	text-align: left;
+	display: inline-block;
+	max-width: 900px;
+	width: 100%;
+	min-height: 50px;
+	line-height: 50px;
+	font-size: 18pt;
+	color: white;
+}
+
+nav {
+	display: block;
+	background: #902dff;
+	padding: 0px 10px;
+}
+

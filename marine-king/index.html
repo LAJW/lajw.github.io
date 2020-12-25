@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Blank page</title>
+	<link rel="stylesheet" href="style3.css">
+</head>
+<body>
+	<nav>
+		<a href="/">Home</a>
+	</nav>
+	<header>
+		<img src="marine-king.png"/>
+		<h2>Rogue-Like RTS written in F#</h2>
+		<h1>Download (0.1.0a)</h1>
+		<a class="download windows" href="#todo">Windows</a>
+		<a class="download linux" href="#todo">Linux</a>
+		<a class="download mac" href="#todo">Mac*</a>
+	</header>
+	<div class="background-video">
+		<video src="video.webm" width="100%" autoplay muted loop></video>
+	</div>
+	<main>
+	<section>
+		<h1>Motivation</h1>
+		<p>
+			It's not just about making a game. It's about showing the
+			world that F# (and by extension any other functional language)
+			can be used for other things than just "financial applications",
+			total programs and command line utilities.
+		</p>
+		<h1>"Just a StarCraft Ripoff"</h1>
+		<p>
+			<i>Yes.</i> I love StarCraft. I wish I had the opportunity to work
+			on it. Sadly,
+			<a href="https://news.blizzard.com/en-us/starcraft2/23544726/starcraft-ii-update-october-15-2020">
+			it's no longer actively developed
+			</a>.
+			But I have my own ideas as to what could be done with the
+			classic RTS formula (especially in the single player
+			department). So while I intend to keep the controls and the
+			feel of units as close as possible to SC/WarCraft/DOTA/League,
+			I intend to throw in some rogue-like ideas to shake things up
+			a bit.
+		</p>
+		<h1>Version 0.1.0 alpha - December 2020</h1>
+		<p><i>The Tech Demo</i></p>
+		<p>
+			I'm not entirely happy with the quality (I've thrown the UI
+			together in less than a month). But I really like feedback, and
+			working on something in secrecy doesn't really feel all that
+			great, so here we are.
+		</p>
+		<h1>Future</h1>
+		<p>
+			I'll keep working on it in my spare time - it's pretty fun. There
+			are many things I want to do (some more obvious than others), but
+			I'd rather not promise anything here.
+		</p>
+		<h1>Tech</h1>
+		<p>
+			F#, Monogame, zero C#... so far
+		</p>
+		<p>
+			I start functional but sometimes performance dictates my choices.
+			And so I use algebraic data types, immutable records, monads,
+			options (there are no nulls), new types, units of measure, abuse
+			tail-call recursion, lazy sequences and so on. But the rendering
+			is completely imperative because all other approaches carry a hefty
+			performance penalty.
+		</p>
+		<p>
+			As a result, unit behavior (gameplay logic) is almost completely
+			unit tested. It took me a while to set this up, but at least I
+			don't have to worry about breaking functionality every time I add
+			a new feature.
+		</p>
+		<h1>Entity-Component-System - not everything</h1>
+		<p>
+			I'm using data oriented design whenever it starts to make sense
+			for performance reasons (rendering, particles, not-triggering GC).
+			But every time I use it, it increases the complexity of said
+			part, so I'll keep its spread to the minimum.
+		</p>
+		<h1>Why not Haskell</h1>
+		<p>
+			Rendering is the main part where the ability to write imperative
+			code really helps and I'm not sure whether I could do the same in
+			Haskell (but I have to admit I don't know it that well, so if
+			someone can send me an e-mail telling me how to efficiently
+			process 40'000 rendering instructions without tripping up the GC,
+			that'd be great). Also, I'm really happy with F#'s compilation
+			times - 30 sec for the whole project and just around 3-5 seconds
+			for one file change, which keeps development enjoyable.
+		</p>
+		<p>
+			Also, let us not forget about the C# libraries.. And in a distant
+			future, it'd be nice to throw this into Unity.
+		</p>
+		<h1>Why not C#</h1>
+		<p>
+			Infinite recursion and coroutines. The ability to write
+			suspendable functions (game scripts) without having to worry
+			about the cost of lambdas is what the entire AI code is based on.
+			I don't have to run a Lua interpreter and write class bindings. I
+			can work in the same codebase regardless of what I might be
+			doing. Units of measure help quite a bit with my lackluster math
+			skills.
+		</p>
+		<h1>Download (0.1.0a)</h1>
+		<p class="closing">
+			<img src="Mothership.png" width="200">
+			At this state, I want feedback and ideas, so the alpha is free.
+			If you want to complain or tell me I'm a man of a weak constitution
+			because I didn't use Haskell or that I'll fail because I didn't
+			use Go, feel free to do so via e-mail:
+			<a href="mailto:lukasz.andrzej.wrona@gmail.com">lukasz.andrzej.wrona@gmail.com</a>.
+		</p>
+		<p>
+			<a class="download windows" href="#todo">Windows</a>
+			<a class="download linux" href="#todo">Linux</a>
+			<a class="download mac" href="#todo">Mac*</a>
+		<p>
+	</section>
+	</main>
+	<footer>
+		<p>
+			* Mac version requires fiddling - I don't own a Mac. You should be
+			able to run it from command line. I don't support this platfrm
+			yet, but am providing a dev build you can use at your own risk -
+			flawed option is better than no option at all.
+		</p>
+		<p>
+			Copyright 2016-2020 by Łukasz A.J. Wrona. All Rights Reserved.
+		</p>
+	</footer>
+</html>

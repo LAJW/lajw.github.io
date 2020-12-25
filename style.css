@@ -1,0 +1,62 @@
+a {
+	transition: 0.2s;
+	color: #902dff;
+}
+
+a:link {
+	color: #902dff;
+}
+
+a:visited {
+	color: grey;
+}
+
+nav a:link, nav a:visited, nav a {
+	color: white;
+	opacity: 0.85;
+	transition: .2s;
+	text-decoration: none;
+	display: inline-block;
+}
+
+nav a:first-child {
+	background: url('../home.png') no-repeat center left;
+	padding-left: 40px;
+}
+
+nav a:hover {
+	opacity: 1;
+}
+
+.spotlight a:link, .spotlight a:visited, .spotlight a, 
+a.fat:visited, a.fat:link, a.fat, aside a:link, aside a:visited, aside a {
+	color: white;
+	transition: 0.2s;
+	outline: 0px #902dff solid;
+}
+
+.spotlight a:hover, a.fat:hover, aside a:hover {
+	background: #902dff;
+	box-shadow: 0px 0px 20px black;
+	outline: 5px #902dff solid;
+}
+
+aside a {
+	transition: 0.2s;
+	box-shadow: 0px 0px 10px transparent;
+}
+
+aside a:hover {
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+address, footer {
+	opacity: 0.7;
+}
+
+footer span {
+	display: inline-block;
+	text-align: left;
+	width: 880px;
+	padding-bottom: 20px
+}
