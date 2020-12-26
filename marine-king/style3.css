@@ -1,22 +1,9 @@
 body {
-    display: grid;
     place-items: center;
     font-family: "Segoe UI", arial;
     background-color: #eee8d5;
     color: #002b36;
     font-size: 12pt;
-    padding: 0px;
-    margin: 0px;
-}
-
-nav {
-    position : fixed;
-    top : 0px;
-    left : 0px;
-}
-
-nav p {
-    max-width : 800px;
 }
 
 header {
@@ -28,28 +15,14 @@ header {
     text-shadow: 0px 0px 10px black;
 }
 
-main {
-    max-width: 800px;
+article {
     background-color: #fdf6e3;
-    padding: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-}
-
-h1 {
-    font-weight: lighter;
-    color: 073642;
-}
-
-a {
-    color : #268bd2;
 }
 
 footer {
     background-color: #93a1a1;
     color: #fdf6e3;
-    width: 100%;
-    display: grid;
-    place-items: center;
 }
 
 .background-video {
@@ -80,13 +53,9 @@ a.download:hover {
     transition: 0.3s;
 }
 
-a.windows {
-    background-color: #268bd2;
-}
+a.windows { background-color: #268bd2; }
 
-a.mac {
-    background-color: #657b83;
-}
+a.mac { background-color: #657b83; }
 
 footer p {
     max-width: 800px;

@@ -3,12 +3,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Blank page</title>
+	<link rel="stylesheet" href="/style.css">
 	<link rel="stylesheet" href="style3.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="/boiler.js"></script>
 </head>
 <body>
-	<nav>
-		<a href="/">Home</a>
-	</nav>
+<main>
+	<video class="background-video" src="video.webm" autoplay muted loop></video>
 	<header>
 		<img src="marine-king.png"/>
 		<h2>Rogue-Like RTS written in F#</h2>
@@ -17,11 +19,7 @@
 		<a class="download linux" href="#todo">Linux</a>
 		<a class="download mac" href="#todo">Mac*</a>
 	</header>
-	<div class="background-video">
-		<video src="video.webm" width="100%" autoplay muted loop></video>
-	</div>
-	<main>
-	<section>
+	<article>
 		<h1>Motivation</h1>
 		<p>
 			It's not just about making a game. It's about showing the
@@ -121,17 +119,14 @@
 			<a class="download linux" href="#todo">Linux</a>
 			<a class="download mac" href="#todo">Mac*</a>
 		<p>
-	</section>
-	</main>
-	<footer>
-		<p>
-			* Mac version requires fiddling - I don't own a Mac. You should be
-			able to run it from command line. I don't support this platfrm
-			yet, but am providing a dev build you can use at your own risk -
-			flawed option is better than no option at all.
-		</p>
-		<p>
-			Copyright 2016-2020 by Łukasz A.J. Wrona. All Rights Reserved.
-		</p>
-	</footer>
+	</article>
+</main>
+<footer>
+	<p>
+		* Mac version requires fiddling - I don't own a Mac. You should be
+		able to run it from command line. I don't support this platfrm
+		yet, but am providing a dev build you can use at your own risk -
+		flawed option is better than no option at all.
+	</p>
+</footer>
 </html>
