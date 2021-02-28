@@ -14,7 +14,7 @@
 	<header>
 		<img src="marine-king.png"/>
 		<h2>Rogue-Like RTS written in F#</h2>
-		<h1>Download (0.1.0a)</h1>
+		<h1>Download (0.2.0a)</h1>
 		<a class="download windows" href="./0.2.0a/marine-king-0.2.0-alpha-win-x64.zip">Windows</a>
 		<a class="download linux" href="./0.2.0a/marine-king-0.2.0-alpha-linux-x64.zip">Linux</a>
 		<a class="download mac" href="./0.2.0a/marine-king-0.2.0-alpha-osx-x64.zip">Mac*</a>
@@ -41,6 +41,54 @@
 			I intend to throw in some rogue-like ideas to shake things up
 			a bit.
 		</p>
+		<h1>Version 0.2.0 alpha - February 2021</h1>
+		<p><i>The UX patch</i></p>
+		<p>
+			In this patch I focused on the new user experience - I've added a
+			brief tutorial which should help remind players how to play
+			StarCraft-like games, altered UI to make it more responsive to
+			the state of the game and provide better feedback if the player
+			does something wrong and their attention to important events in
+			the game.
+		</p>
+		<ul>
+			<li>A new unit - Kami, the Spell Caster</li>
+			<li>Unit AI
+				<ul>
+					<li>Ranged units will break the chase after 5 seconds if
+					they're just passively defending a location</li>
+					<li>Workers get "bored" after waiting for 2 seconds and look
+					for a better mineral field</li>
+					<li>Workers go to the nearest mineral field rather than a
+					random one</li>
+				</ul>
+			</li>
+			<li>Environment
+				<ul>
+					<li>Blank spaces on the generated map are now filled with tiles</li>
+					<li>Wall shadows, dirt</li>
+					<li>Fixed fog of war stutter</li>
+				</ul>
+			</li>
+			<li>UI
+				<ul>
+					<li>Double Click Select</li>
+					<li>Shift-select adds to selection</li>
+					<li>Sync command palette to command availability</li>
+					<li>Notifications and objectives system</li>
+					<li>Click & Drag on the minimap</li>
+					<li>Unify behavior of UI buttons and keyboard shortcuts
+					to be more StarCraft-like</li>
+					<li>Animations!
+				</ul>
+			</li>
+			<li>Performance improvements
+				<ul>
+				<li>Minimap rendering (don't compare arrays before sending)</li>
+				<li>Fog of war rendering</li>
+				</ul>
+			</li>
+		</ul>
 		<h1>Version 0.1.0 alpha - December 2020</h1>
 		<p><i>The Tech Demo</i></p>
 		<p>
@@ -105,20 +153,7 @@
 			doing. Units of measure help quite a bit with my lackluster math
 			skills.
 		</p>
-		<pre>
-# Make sure you have SDL installed
-sudo apt-get install libsdl2-2.0
-
-# Unpack
-unzip ./marine-king-0.1.0-ubuntu18.zip -d marine-king
-
-# Make the game executable
-chmod +x ./marine-king/Mark3
-
-# Run
-./marine-king/Mark3
-		</pre>
-		<h1>Download (0.1.0a)</h1>
+		<h1>Download (0.2.0a)</h1>
 		<p class="closing">
 			<img src="Mothership.png" width="200">
 			At this state, I want feedback and ideas, so the alpha is free.
@@ -128,9 +163,9 @@ chmod +x ./marine-king/Mark3
 			<a href="mailto:lukasz.andrzej.wrona@gmail.com">lukasz.andrzej.wrona@gmail.com</a>.
 		</p>
 		<p>
-			<a class="download windows" href="./0.1.0a/marine-king-0.1.0a-win10-x64.zip">Windows</a>
-			<a class="download linux" href="./0.1.0a/marine-king-0.1.0a-ubuntu.18.04-x64.tar.gz">Linux</a>
-			<a class="download mac" href="./0.1.0a/marine-king-0.1.0a-osx.10.15-x64.zip">Mac*</a>
+			<a class="download windows" href="./0.2.0a/marine-king-0.2.0-alpha-win-x64.zip">Windows</a>
+			<a class="download linux" href="./0.2.0a/marine-king-0.2.0-alpha-linux-x64.zip">Linux</a>
+			<a class="download mac" href="./0.2.0a/marine-king-0.2.0-alpha-osx-x64.zip">Mac*</a>
 		<p>
 	</article>
 </main>
